@@ -8,16 +8,297 @@
   <title>주식회사 와이엘컴퍼니 | YL Company</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-  <header id="header">
+  <header id="header" class="flex-jb">
+     <div class="header-inner flex-jb">
+        <a class="main-logo" href="/index.html">
+          <img id="logo" src="/imgs/main-logo-white.png" alt="와이엘컴퍼니 로고">
+          <h1 class="hidden-title">YL Company</h1>
+        </a>
 
+        <nav class="gnb">
+          <ul class="gnb-list-wrap flex-jb">
+            <li class="gnb-list">
+              <a href="">회사소개</a>
+
+              <ul class="hidden-nav">
+                <li>인사말</li>
+                <li>주요연혁</li>
+                <li>브랜드</li>
+                <li>인증 및 지정</li>
+                <li>주요거래처</li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="">상품소개</a>
+
+              <ul class="hidden-nav">
+                <li>인사말</li>
+                <li>주요연혁</li>
+                <li>브랜드</li>
+                <li>인증 및 지정</li>
+                <li>주요거래처</li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="">사업소개</a>
+
+              <ul class="hidden-nav">
+                <li>인사말</li>
+                <li>주요연혁</li>
+                <li>브랜드</li>
+                <li>인증 및 지정</li>
+                <li>주요거래처</li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="">고객지원</a>
+
+              <ul class="hidden-nav">
+                <li>인사말</li>
+                <li>주요연혁</li>
+                <li>브랜드</li>
+                <li>인증 및 지정</li>
+                <li>주요거래처</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+     </div>
+
+     <div class="header-utils">
+        <div class="flex-jb">
+          <button class="lan-select-btn lang">KOR</button>
+          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 28C21.9036 28 27.5 22.4036 27.5 15.5C27.5 8.59644 21.9036 3 15 3C8.09644 3 2.5 8.59644 2.5 15.5C2.5 22.4036 8.09644 28 15 28Z" stroke="#474747" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2.5 15.5H27.5" stroke="#474747" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 3C18.1266 6.42294 19.9034 10.865 20 15.5C19.9034 20.135 18.1266 24.5771 15 28C11.8734 24.5771 10.0966 20.135 10 15.5C10.0966 10.865 11.8734 6.42294 15 3Z" stroke="#474747" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="hidden-lan lang">
+          <span>ENG</span>
+        </div>
+      </div>
   </header>
 
   <main id="main">
-    <section>1</section>
+    <!-- 1page -->
+    <section class="section main-section num1">
+      <div class="inner flex-ac">
+        <div class="section-content intro">
+          <h3>사람부터 반려동물까지 -</h3>
+          <h4>모두의 일상을 생각합니다.</h4>
+          <button>더알아보기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2page -->
+    <section class="section main-section num2">
+      <div class="inner flex-ac flex-jc">
+        <div class="section-content about flex-ac">
+          <div class="left-area">
+            <span class="section-title">ABOUT US</span>
+            <h2 class="section-main-text">YL컴퍼니는</h2>
+            <p class="section-sub-text">
+              <strong>더 나은 사회가치를 공유하고자 노력합니다</strong><br/>
+              <span>더 나은 사회가치를 공유하고자 노력합니다</span><br/>
+              <span>더 나은 사회가치를 공유하고자 노력합니다</span><br/>
+            </p>
+
+            <button class="more-page-button">자세히 보기</button>
+          </div>
+          <div class="right-area">
+            <div class="img-box">
+              <img src="./imgs/main-section-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3page -->
+    <section class="section main-section num3">
+      <div class="inner over-fadding flex-ac">
+        <div class="section-content brand flex-ac" style="width: 100%;">
+          <div class="left-area" style="width: 50%;" >
+            <span class="section-title">BRAND</span>
+            <h2 class="section-main-text">
+              <span>목표를 실현하는</span><br/>
+              <span>다양한 브랜드</span>
+            </h2>
+            <p class="section-sub-text direction-col">
+              <span class="active">아하펫 AHAPET</span>
+              <span>만물 MANMUL</span>
+            </p>
+          </div>
+          <div class="right-area slider-wrap">
+            <div class="swiper mainPageSwipers">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./imgs/main-section-2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imgs/main-section-2.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination mainPageSwiper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4page -->
+    <section class="section main-section num4">
+      <div class="inner over-fadding" style="padding-top: 8%;">
+        <div class="section-content notice">
+          <div class="left-area">
+            <span class="section-title">NEWS & NOTICE</span>
+            <h2 class="section-main-text">
+              다양한 소식과 공지사항
+            </h2>
+          </div>
+          
+          <ul class="news-notice">
+            <div class="swiper mainPageSwipers2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <li class="notice-list">
+                      <div class="content">
+                        <span class="category">NEWS</span>
+                        <p>[중앙일보] 아하펫 반려동물 소변검사키드 '애니키트' 리뉴얼 출시</p>
+                      </div>
+                      <span class="reg-date">2024-09-23</span>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="notice-list">
+                      <div class="content">
+                        <span class="category">NEWS</span>
+                        <p>[중앙일보] 아하펫 반려동물 소변검사키드 '애니키트' 리뉴얼 출시</p>
+                      </div>
+                      <span class="reg-date">2024-09-23</span>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="notice-list">
+                      <div class="content">
+                        <span class="category">NEWS</span>
+                        <p>[중앙일보] 아하펫 반려동물 소변검사키드 '애니키트' 리뉴얼 출시</p>
+                      </div>
+                      <span class="reg-date">2024-09-23</span>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="notice-list">
+                      <div class="content">
+                        <span class="category">NEWS</span>
+                        <p>[중앙일보] 아하펫 반려동물 소변검사키드 '애니키트' 리뉴얼 출시</p>
+                      </div>
+                      <span class="reg-date">2024-09-23</span>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="notice-list">
+                      <div class="content">
+                        <span class="category">NEWS</span>
+                        <p>[중앙일보] 아하펫 반려동물 소변검사키드 '애니키트' 리뉴얼 출시</p>
+                      </div>
+                      <span class="reg-date">2024-09-23</span>
+                    </li>
+                </div>
+              </div>
+              <div class="notice-swiper-button-wrap">
+                <div class="swiper-button-prev notice"></div>
+                <div class="swiper-button-next notice"></div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5page -->
+    <section class="section main-section num5 flex-jb flex-jc direction-col">
+      <div class="section-content" style="text-align: center; margin-bottom: 50px;">
+        <span class="section-title">INQUIRY</span>
+        <h2 class="section-main-text" style="font-size: 60px; letter-spacing: -1px;">
+          제품 문의부터 비즈니스 제휴까지<br/>
+          무엇이든 물어보세요
+        </h2>
+      </div>
+      <button class="contact-button">
+        <span>지금 바로 문의하기</span>
+        <img src="./imgs/yellow-arrow-r.png" alt="">
+      </button>
+    </section>
+
+    <aside class="side-page-nation">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </aside>
   </main>
 
-  <footer id="footer"></footer>
+  <footer id="footer">
+    <section class="footer-main-section">
+      <div class="title-area">
+        <a class="main-logo" href="/index.html">
+          <img id="logo" src="/imgs/main-logo-white.png" alt="와이엘컴퍼니 로고">
+          <h1 class="hidden-title">YL Company</h1>
+        </a>
+        <p>궁금하신 사항은 문의해주세요</p>
+        <div class="contact-buttons">
+          <button>메인 홈 바로가기</button>
+          <button>1:1 문의하기</button>
+        </div>
+      </div>
+
+      <address class="text-area" style="color: #FFFFFF99;">
+        <div>
+          <table class="address">
+            <thead>(주)와이엘컴퍼니</thead>
+            <tbody>
+              <tr>
+                <td>대표: 이건석</td>
+              </tr>
+              <tr>
+                <td>사업자등록번호: 467-81-01628</td>
+              </tr>
+              <tr>
+                <td>안양시 동안구 엘에스로 142 금정역 SKV1센터 404호</td>
+              </tr>
+              <tr>
+                <td>TEL. 070-5173-0792</td>
+              </tr>
+              <tr>
+                <td>FAX. 037-5176-0387</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table class="service">
+            <thead>개인정보처리방침</thead>
+            <tbody>
+              <tr>
+                <td>이용약관</td>
+              </tr>
+              <tr>
+                <td>오시는 길</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </address>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
