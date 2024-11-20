@@ -69,7 +69,7 @@ button {
   cursor: pointer;
 }
 
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 
