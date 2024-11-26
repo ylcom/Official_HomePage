@@ -507,6 +507,9 @@
   gap: 35px;
 }
 .certification .certification-list .img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 30px;
   border: 1px solid #DDDDDD;
   border-radius: 25px;
