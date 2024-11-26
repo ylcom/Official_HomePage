@@ -197,14 +197,21 @@ const options = {
 
 const io = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry=> {
+    const leftArea = entry.target.querySelector('.left-area')
+    const rightArea = entry.target.querySelector('.right-area')
     if(entry.isIntersecting) {
-      const leftArea = entry.target.querySelector('.left-area')
-      const rightArea = entry.target.querySelector('.right-area')
       if (leftArea) {
         leftArea.classList.add('animate');
       }
       if (rightArea) {
         rightArea.classList.add('animate'); 
+      }
+    } else {
+      if (leftArea) {
+        leftArea.classList.remove('animate');
+      }
+      if (rightArea) {
+        rightArea.classList.remove('animate'); 
       }
     }
    
