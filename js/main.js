@@ -54,7 +54,7 @@ function changeHeaderScroll() {
   }
 }
 
-if(window.location.pathname.endsWith('index.html')) {
+if(window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
   main.addEventListener('wheel', (event)=> sectionMoveScroll(event), {passive: true})
 } else {
   window.addEventListener('scroll', changeHeaderScroll, {passive:true})
@@ -62,7 +62,6 @@ if(window.location.pathname.endsWith('index.html')) {
 
 /* nav hover event */
 navList.forEach(list=> {
-  console.log('list')
   list.addEventListener('mouseover', ()=> {
     list.classList.add('active')
   })
@@ -92,23 +91,18 @@ changeButton.forEach(button=> {
       changeButton[0].textContent = 'ENG'
       changeButton[1].textContent = 'KOR'
     }
-    console.log('button',lanButton)
-    // lanButton.classList.remove('click')
   })
 })
 
 /* 인증 페이지네이션 */
 const listItems = document.querySelectorAll('.certification-list')
-console.log('length',listItems)
 const viewPerPage = 9
 const totalPages = Math.ceil(listItems.length / viewPerPage)
-console.log('totalPages',totalPages)
 const pageElement = document.querySelector('.page-area')
 
 let currentPage = 1
 
 function showPage(page) {
-  console.log(page)
   listItems.forEach((list)=> {
     list.style.display = 'none'
   })
@@ -185,7 +179,6 @@ if(window.location.pathname.includes('certification')) {
   
   backBtn.addEventListener('click', ()=> {
     if(currentPage < totalPages) {
-      console.log(currentPage < totalPages)
       currentPage = totalPages
       showPage(currentPage)
       const buttons = document.querySelectorAll('.page-area button')
@@ -195,7 +188,35 @@ if(window.location.pathname.includes('certification')) {
   })
 }
 
-/* 메인페이지 swiper */
+/* interection observer */
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+}
+
+const io = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry=> {
+    if(entry.isIntersecting) {
+      const leftArea = entry.target.querySelector('.left-area')
+      const rightArea = entry.target.querySelector('.right-area')
+      if (leftArea) {
+        leftArea.classList.add('animate');
+      }
+      if (rightArea) {
+        rightArea.classList.add('animate'); 
+      }
+    }
+   
+  })
+}, options)
+
+const target = document.querySelector('.main-section.num2')
+if(target) {
+  io.observe(target)
+}
+
+/* 메인페이지 swiper (brand) */
 const spans = document.querySelectorAll('.section-content.brand .section-sub-text span')
 
 var swiperMain = new Swiper(".mainPageSwipers", {
@@ -205,14 +226,14 @@ var swiperMain = new Swiper(".mainPageSwipers", {
   },
   slidesPerView: 1.4,
   spaceBetween: 50,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  autoplay: {
+    delay: 3000
   },
+  loop: true,
 });
 
 swiperMain.on('slideChange', (event)=> {
-  const index = event.activeIndex
+  const index = swiperMain.realIndex
   spans.forEach((span, i) => {
     if (i === index) {
       span.classList.add("active");
@@ -221,12 +242,26 @@ swiperMain.on('slideChange', (event)=> {
     }
   });
 })
+spans.forEach((span, index)=>span.addEventListener('click', ()=> {
+  swiperMain.slideToLoop(index)
+}))
 
+/* notice swiper */
 var swiperMain2 = new Swiper(".mainPageSwipers2", {
   slidesPerView: 3.5,
   spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 3000
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    1280: {
+      slidesPerView: 4.5,
+    }
+  }
 });
+

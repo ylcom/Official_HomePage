@@ -87,7 +87,6 @@
 /* header */
 #header {
   width: 100%;
-  max-width: 1440px;
   padding: 35px 6%;
   position: fixed;
   top: 0;
@@ -164,10 +163,10 @@
 #header.no-top .lan-select-btn::before {
   background: var(--color-black);
 }
-#header.no-top .gnb-list a {
+#header.no-top .gnb-list > a {
   color: var(--color-black);
 }
-#header.no-top .gnb-list.active a {
+#header.no-top .gnb-list.active > a {
   color: var(--color-main);
 }
 #header.no-top svg path {
@@ -223,6 +222,8 @@
 .gnb .gnb-list.active a.go-menu {
   color: var(--color-black);
   text-decoration: none;
+  font-weight: var(--weight-medium);
+  font-size: var(--fz-18);
 }
 .gnb .gnb-list.active a.go-menu::before {
   display: none;
@@ -260,6 +261,24 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.43);
   overflow: hidden;
+}
+.main-section.num2 .left-area {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.6s ease-in-out;
+}
+.main-section.num2 .left-area.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.main-section.num2 .right-area {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.6s ease-in-out;
+}
+.main-section.num2 .right-area.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 .main-section.num5 {
   background: url("../imgs/yl-bg-logo.png") no-repeat center;
@@ -557,7 +576,7 @@
 .side-page-nation {
   position: fixed;
   top: 50%;
-  left: 4%;
+  left: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -667,6 +686,7 @@
   font-size: var(--fz-24);
   font-weight: var(--weight-semibold);
   color: #DDDDDD;
+  cursor: pointer;
 }
 .section-content.brand .section-sub-text span.active {
   font-size: var(--fz-28);
@@ -686,7 +706,7 @@
   padding: 40px;
   border-radius: 55px;
   border: 2px solid #DDDDDD;
-  max-width: 400px;
+  max-width: 300px;
   aspect-ratio: 1;
 }
 .news-notice .notice-list .content .category {
@@ -847,11 +867,6 @@
 }
 
 /* media query */
-@media (min-width: 1440px) {
-  .side-page-nation {
-    left: calc((100vw - 1480px) / 2 + 2%);
-  }
-}
 @media (max-width: 1023px) {
   #header .main-logo {
     margin-right: 10px;

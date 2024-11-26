@@ -41,7 +41,7 @@ body {
   font-family: "Pretendard", sans-serif;
 	line-height: 1;
   color: #474747;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   scrollbar-width: none;
 }
