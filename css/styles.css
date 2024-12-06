@@ -414,8 +414,8 @@
 .history-section .history-list-wrap .history-list {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 50px 0;
+  gap: 200px;
+  padding: 50px 200px;
 }
 .history-section .history-list-wrap .history-list .year-area {
   align-self: flex-start;
@@ -499,6 +499,36 @@
 }
 .about-brand.brand_manmul .product-list {
   background: white;
+}
+
+.brand-detail {
+  box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 1/1.2;
+}
+.brand-detail .top {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+.brand-detail .bottom {
+  padding: 30px;
+}
+.brand-detail .bottom p {
+  font-weight: var(--weight-semibold);
+  font-size: var(--fz-24);
+  margin-bottom: 10px;
+}
+.brand-detail .bottom span {
+  font-size: var(--fz-18);
+  font-weight: var(--weight-medium);
+  color: #AAAAAA;
+  letter-spacing: -1px;
 }
 
 .certification .certification-list-wrap {
