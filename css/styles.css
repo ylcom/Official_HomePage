@@ -507,6 +507,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  max-width: 400px;
   aspect-ratio: 1/1.2;
 }
 .brand-detail .top {
@@ -846,7 +847,7 @@
 
 /* swiper */
 .swiper.mainPageSwipers {
-  padding-bottom: 50px;
+  padding: 50px;
 }
 
 .swiper.mainPageSwipers2 {
